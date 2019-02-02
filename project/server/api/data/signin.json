@@ -1,0 +1,18 @@
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjIxNjcsImV4cCI6MTU1MTU4NzEzOCwicGxhdGZvcm0iOiJtb3ppbGxhIn0.ofA-7qYoC20j0HBpv9qJThskW2d2_hKQd_B_TICDlaM",
+    "user": {
+        "user_id": 2167,
+        "user_name": "13928007971",
+        "sex": 0,
+        "or_state": 1,
+        "alias": "王高健(A)",
+        "is_buy": 1,
+        "type": 1,
+        "state": 1,
+        "mobile": "13928007971",
+        "avatar": null,
+        "is_completed": true
+    },
+    "error_code": 0,
+    "debug_id": "5c53ca42a3432"
+}
