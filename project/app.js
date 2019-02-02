@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
 var app = express();
 
 // view engine setup
@@ -21,11 +22,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+/*************************************api 注册路由***********************************/
+var apiUsersRouter = require('./server/api/routes/users');
+app.use('/api.users', apiUsersRouter);
+
+var loginRouter = require('./routes/login');
+app.use('/login', loginRouter);
+
+
+var homeRouter = require('./server/api/routes/home');
+app.use('/api.home', homeRouter);
+
+
+/*************************************end***********************************/
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     next(createError(404));
 });
+
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -38,11 +53,5 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-/*************************************注册路由***********************************/
-// var server = require("server/api/router");
-// server(app)
-var apiUsersRouter = require('./server/api/routes/users');
-app.use('/api.users', apiUsersRouter);
-/*************************************end***********************************/
 
 module.exports = app;
